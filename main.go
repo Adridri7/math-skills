@@ -12,10 +12,10 @@ func main() {
 	path := os.Args[1]
 	tab := getFileContent(path)
 
-	fmt.Printf("Average %x", math.Round(Average(tab)))
-	fmt.Printf("Median %x", math.Round(Median(tab)))
-	fmt.Println(int64(math.Round(Variance(tab))))
-	fmt.Println(math.Round(math.Sqrt(Variance(tab))))
+	fmt.Println("Average:", math.Round(Average(tab)))
+	fmt.Println("Median:", math.Round(Median(tab)))
+	fmt.Println("Variance:", int64(math.Round(Variance(tab))))
+	fmt.Println("Standard Deviation:", math.Round(math.Sqrt(Variance(tab))))
 }
 
 func Average(tab []int) (res float64) {
